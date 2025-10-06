@@ -1,0 +1,293 @@
+/* god damn i fucking hate css*/
+
+/* desktop logo */
+.VPNavBarTitle .logo {
+  position: fixed;
+  top: 12px;
+  left: 20px;
+  width: 156px;
+  height: 156px;
+  z-index: 100;
+}
+
+/* navbar container for better centering */
+.VPNavBarTitle {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+/* desktop style */
+.VPNavBarTitle .title {
+  white-space: pre-line;
+  text-align: center;
+  padding-top: 25px !important;
+  padding-left: 10px !important;
+  font-size: 32px;
+  position: relative;
+  margin: 0 auto;
+  display: block;
+}
+
+/* mobile styles - flexbox centering with logo and title */
+@media (max-width: 768px) {
+  .VPNavBarTitle {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    width: 100% !important;
+    position: fixed !important; /* fixed position */
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: var(--vp-c-bg, #ffffff);
+    border-bottom: 1px solid var(--vp-c-divider, #e0e0e0);
+    padding: 8px 0;
+  }
+
+  .VPNavBarTitle .logo {
+    width: 52px;
+    height: 52px;
+    top: 8px;
+    left: 8px;
+    z-index: 50;
+    position: fixed !important; /* fixed position */
+  }
+
+  .VPNavBarTitle .title {
+    flex: 1;
+    font-size: 32px; /* same size as desktop */
+    z-index: 100;
+    text-align: center !important;
+    width: 100%;
+    position: relative;
+  }
+
+  /* ensure hamburger menu is positioned correctly in navbar */
+  .VPNavBarHamburger {
+    position: fixed !important;
+    top: 8px !important;
+    right: 8px !important;
+    z-index: 1001 !important;
+  }
+
+  /* hide mobile menu on all screen sizes */
+  .VPNavBarMenu {
+    display: none !important;
+  }
+
+
+}
+
+/* smaller ppi mobile devices - flexbox centering with logo and title */
+@media (max-width: 480px) {
+  .VPNavBarTitle {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    width: 100% !important;
+    position: fixed !important; /* keep navbar fixed at top */
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: var(--vp-c-bg, #ffffff);
+    border-bottom: 1px solid var(--vp-c-divider, #e0e0e0);
+    padding: 8px 0;
+  }
+
+  .VPNavBarTitle .logo {
+    width: 48px;
+    height: 48px;
+    top: 12px;
+    left: 12px;
+    z-index: 50;
+    position: fixed !important; /* keep logo fixed position */
+  }
+
+  .VPNavBarTitle .title {
+    flex: 1;
+    font-size: 32px; /* same size as desktop */
+    z-index: 100;
+    text-align: center !important;
+  }
+
+  /* ensure hamburger menu positioning on very small screens */
+  .VPNavBarHamburger {
+    position: fixed !important;
+    top: 12px !important;
+    right: 12px !important;
+    z-index: 1001 !important;
+  }
+
+
+}
+
+/* add padding to body on mobile to account for fixed navbar */
+@media (max-width: 768px) {
+  body {
+    padding-top: 15px; /* fixed navbar height */
+  }
+}
+.VPHero .container {
+  max-width: 100% !important;
+}
+.VPHero .main {
+  max-width: 100% !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.VPHero .name,
+.VPHero .text,
+.VPHero .tagline {
+  text-align: center;
+}
+.VPHero .actions {
+  justify-content: center;
+}
+
+/* background gradient that fades to red */
+body {
+  background: linear-gradient(
+    to bottom,
+    var(--vp-c-bg, #ffffff) 0%,
+    var(--vp-c-bg, #ffffff) 25%,
+    rgba(220, 140, 150, 0.25) 45%,
+    rgba(232, 127, 166, 0.4) 60%,
+    rgba(60, 154, 180, 0.177) 75%,
+    rgba(160, 40, 90, 0.264) 85%,
+    #e92b2b83 100%
+  );
+  background-attachment: fixed;
+  min-height: 100vh; /* Display fully within viewport */
+}
+
+/* mobile gradient - compressed for smaller screens */
+@media (max-width: 768px) {
+  body {
+    background: linear-gradient(
+      to bottom,
+      var(--vp-c-bg, #ffffff) 0%,
+      rgba(220, 140, 150, 0.25) 30%,
+      rgba(232, 127, 166, 0.4) 50%,
+      rgba(60, 154, 180, 0.177) 70%,
+      rgba(160, 40, 90, 0.264) 85%,
+      #e92b2b83 100%
+    );
+    background-attachment: fixed;
+    min-height: 100vh; /* Ensure gradient displays fully on mobile */
+  }
+}
+
+/* desktop sidebar - keep original styling */
+.VPSidebar {
+  background: rgba(0, 0, 0, 0.1) !important;
+  backdrop-filter: blur(2px);
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.VPSidebar:hover {
+  background: rgba(0, 0, 0, 0.15) !important;
+}
+
+/* mobile sidebar - make it much more visible */
+@media (max-width: 768px) {
+  .VPSidebar {
+    background: rgba(0, 0, 0, 0.8) !important;
+    backdrop-filter: blur(10px);
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .VPSidebar:hover {
+    background: rgba(0, 0, 0, 0.9) !important;
+  }
+}
+
+
+
+/* fix curtain overlay to show background gradient */
+.aside-curtain {
+  background: transparent !important;
+}
+
+.aside-curtain[data-v-343c73d6] {
+  background: rgba(0, 0, 0, 0.05) !important;
+  backdrop-filter: blur(1px) !important;
+}
+
+/* Ensure canvas elements are isolated from body background */
+#color-wheel-canvas {
+  background: transparent !important;
+  isolation: isolate;
+}
+
+/* mobile - give solid backgrounds to curtain and canvas */
+@media (max-width: 768px) {
+  .aside-curtain {
+    background: var(--vp-c-bg, #ffffff) !important;
+    backdrop-filter: none !important;
+  }
+
+  .aside-curtain[data-v-343c73d6] {
+    background: rgba(0, 0, 0, 0.1) !important;
+    backdrop-filter: blur(1px) !important;
+  }
+
+  #color-wheel-canvas {
+    background: var(--vp-c-bg, #ffffff) !important;
+    isolation: isolate;
+  }
+}
+
+/* center sidebar navigation text and items */
+.VPSidebar .group {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.VPSidebar .VPSidebarItem.level-0 .text {
+  text-align: center !important;
+}
+
+.VPSidebar .VPSidebarItem .items {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.VPSidebar .VPSidebarItem.level-1 .text {
+  text-align: center !important;
+}
+
+/* additional centering for all sidebar text elements */
+.VPSidebar .VPSidebarItem .text {
+  text-align: center !important;
+  display: block;
+}
+
+.VPSidebar h1.text,
+.VPSidebar h2.text,
+.VPSidebar h3.text,
+.VPSidebar h4.text,
+.VPSidebar h5.text,
+.VPSidebar h6.text,
+.VPSidebar p.text {
+  text-align: center !important;
+  margin: 0 auto;
+}
+
+/* make outline text lowercase */
+.VPDocAsideOutline .outline-title {
+  text-transform: lowercase !important;
+}
+
+.VPDocAsideOutline .outline-link {
+  text-transform: lowercase !important;
+}
