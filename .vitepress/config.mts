@@ -4,6 +4,7 @@ export default defineConfig({
   title: "drake's stuff",
   description: "some basic shit for me to poke around with",
   cleanUrls: true,
+  base: '/',
   themeConfig: {
     logo: '/drake.png',
     // https://vitepress.dev/reference/default-theme-config
