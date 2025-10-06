@@ -1,5 +1,9 @@
-# Color Picker
+---
+title: color picker
+description: 🎨 color picker tool with RGB sliders and live preview
+---
 
+# Color Picker
   An interactive color picker tool with RGB sliders and live preview.
 
   Touching or clicking the square color preview (..to the left of `#808080`) brings up your device's native color picker. It's probably the nicest option in most choices. 
